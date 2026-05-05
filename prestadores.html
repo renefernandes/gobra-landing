@@ -1,885 +1,2191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gôbra para Prestadores — Capital de giro e clientes que pagam de verdade</title>
-<meta name="description" content="Acesse capital de giro a taxas justas com a obra como garantia. Receba o pagamento garantido na entrega e construa um histórico que abre novas portas.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gôbra para Prestadores — Capital de giro e clientes que pagam de verdade</title>
+  <meta name="description"
+    content="Acesse capital de giro a taxas justas com a obra como garantia. Receba o pagamento garantido na entrega e construa um histórico que abre novas portas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-<style>
-:root {
-  --brand:#CCFCCB; --algae:#96E6B3; --spring:#568259; --deep:#2C5430; --mist:#F1FFFA;
-  --asparagus:#464E47; --ink:#1A1A1A; --char:#1A1A1A; --slate:#666; --silver:#999;
-  --cloud:#E5E5E5; --snow:#FAFAFA; --white:#FFF;
-  --font-display:'Inter',system-ui,-apple-system,sans-serif;
-  --font-body:'Inter',system-ui,-apple-system,sans-serif;
-  --font-mono:'IBM Plex Mono','Consolas',monospace;
-  --max-width:1200px; --gutter:clamp(1.5rem,4vw,3rem);
-  --ease-out:cubic-bezier(0.16,1,0.3,1);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--char); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; border: none; background: none; cursor: pointer; color: inherit; }
-::selection { background: var(--brand); color: var(--deep); }
+  <style>
+    :root {
+      --brand: #CCFCCB;
+      --algae: #96E6B3;
+      --spring: #568259;
+      --deep: #2C5430;
+      --mist: #F1FFFA;
+      --asparagus: #464E47;
+      --ink: #1A1A1A;
+      --char: #1A1A1A;
+      --slate: #666;
+      --silver: #999;
+      --cloud: #E5E5E5;
+      --snow: #FAFAFA;
+      --white: #FFF;
+      --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+      --max-width: 1200px;
+      --gutter: clamp(1.5rem, 4vw, 3rem);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-.display-xl { font-family: var(--font-display); font-size: clamp(3rem,7vw,5.75rem); font-weight: 200; line-height: 1.02; letter-spacing: -0.04em; }
-.display-xl strong { font-weight: 700; }
-.display-md { font-family: var(--font-display); font-size: clamp(1.75rem,3.5vw,2.5rem); font-weight: 200; line-height: 1.15; letter-spacing: -0.02em; }
-.display-md strong { font-weight: 700; }
-.eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--spring); }
-.eyebrow.on-dark { color: var(--brand); }
-.body-lg { font-size: 1.125rem; line-height: 1.6; color: var(--slate); }
-.mono { font-family: var(--font-mono); font-feature-settings: 'tnum'; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.wm { display: inline-flex; align-items: baseline; position: relative; letter-spacing: -0.04em; vertical-align: baseline; }
-.wm .go { font-weight: 300; }
-.wm .bra { font-weight: 700; }
-.wm .o-wrap { position: relative; display: inline-block; }
-.wm .circumflex { position: absolute; top: -0.05em; left: 50%; transform: translateX(-50%); width: 0.35em; height: 0.15em; pointer-events: none; }
-.wm-on-dark .circumflex path { stroke: var(--brand); }
-.wm-on-light .circumflex path { stroke: var(--spring); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
-section { padding: clamp(4rem,8vw,7rem) 0; }
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--char);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 0; background: rgba(255,255,255,0.7); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid transparent; transition: all 0.3s var(--ease-out); }
-.nav.scrolled { border-bottom-color: var(--cloud); background: rgba(255,255,255,0.85); }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.nav-wordmark { font-size: 1.5rem; color: var(--char); }
-.nav-back { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; color: var(--slate); margin-left: 0.875rem; padding-left: 0.875rem; border-left: 1px solid var(--cloud); transition: color 0.2s var(--ease-out); }
-.nav-back:hover { color: var(--char); }
-.nav-menu { display: flex; gap: 2rem; align-items: center; }
-.nav-link { font-size: 0.875rem; font-weight: 500; color: var(--slate); transition: color 0.2s var(--ease-out); }
-.nav-link:hover { color: var(--char); }
-.nav-link.cta { background: var(--char); color: var(--white); padding: 0.625rem 1.25rem; border-radius: 999px; transition: all 0.2s var(--ease-out); }
-.nav-link.cta:hover { background: var(--spring); transform: translateY(-1px); }
-@media (max-width: 768px) {
-  .nav-menu { gap: 0.75rem; }
-  .nav-link:not(.cta) { display: none; }
-  .nav-back { display: none; }
-}
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
 
-.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 999px; font-size: 0.9375rem; font-weight: 500; transition: all 0.25s var(--ease-out); cursor: pointer; border: 1px solid transparent; }
-.btn-primary { background: var(--char); color: var(--white); }
-.btn-primary:hover { background: var(--spring); transform: translateY(-2px); box-shadow: 0 8px 24px -8px rgba(86,130,89,0.35); }
-.btn-secondary { background: transparent; color: var(--char); border-color: var(--cloud); }
-.btn-secondary:hover { border-color: var(--char); background: var(--snow); }
-.btn-light { background: var(--white); color: var(--ink); }
-.btn-light:hover { background: var(--brand); color: var(--deep); transform: translateY(-2px); }
-.btn-arrow { transition: transform 0.2s var(--ease-out); }
-.btn:hover .btn-arrow { transform: translateX(3px); }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal.delay-1 { transition-delay: 0.1s; }
-.reveal.delay-2 { transition-delay: 0.2s; }
-.reveal.delay-3 { transition-delay: 0.3s; }
+    button {
+      font: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: inherit;
+    }
 
-/* HERO */
-.hero { padding-top: clamp(7rem, 14vw, 10rem); padding-bottom: clamp(4rem, 8vw, 7rem); position: relative; }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: var(--brand); }
-.hero-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 3rem; align-items: center; }
-@media (min-width: 1000px) { .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 5rem; } }
-.hero-content > * + * { margin-top: 1.5rem; }
+    ::selection {
+      background: var(--brand);
+      color: var(--deep);
+    }
 
-.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.875rem; background: var(--mist); border: 1px solid var(--brand); border-radius: 999px; font-size: 0.75rem; font-weight: 500; color: var(--deep); letter-spacing: 0.02em; }
-.hero-badge svg { width: 14px; height: 14px; color: var(--spring); }
+    .display-xl {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.75rem);
+      font-weight: 200;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
 
-.hero-title { font-family: var(--font-display); font-size: clamp(2.75rem, 5.5vw, 4.5rem); font-weight: 200; line-height: 1; letter-spacing: -0.045em; color: var(--char); }
-.hero-title strong { font-weight: 700; }
-.hero-title .accent { font-weight: 700; position: relative; display: inline-block; }
-.hero-title .accent::after { content: ''; position: absolute; bottom: 0.06em; left: -0.05em; right: -0.05em; height: 0.35em; background: var(--brand); z-index: -1; transform: skewX(-3deg); }
-.hero-description { font-size: 1.125rem; line-height: 1.55; color: var(--slate); max-width: 32rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.875rem; align-items: center; }
+    .display-xl strong {
+      font-weight: 700;
+    }
 
-.hero-trust { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--cloud); }
-.hero-trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: var(--slate); }
-.hero-trust-item svg { width: 16px; height: 16px; color: var(--spring); flex-shrink: 0; }
+    .display-md {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 200;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
 
-/* Hero visual — Crédito card */
-.hero-visual { position: relative; max-width: 28rem; width: 100%; margin-left: auto; }
+    .display-md strong {
+      font-weight: 700;
+    }
 
-.credit-card {
-  background: var(--white); border: 1px solid var(--cloud); border-radius: 24px; padding: 1.75rem;
-  box-shadow: 0 24px 56px -24px rgba(26,26,26,0.18), 0 0 0 1px rgba(0,0,0,0.02);
-}
-.credit-header {
-  display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--cloud);
-}
-.credit-title { display: flex; align-items: center; gap: 0.625rem; }
-.credit-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--mist); display: grid; place-items: center; color: var(--spring); }
-.credit-icon svg { width: 18px; height: 18px; }
-.credit-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); }
-.credit-name { font-size: 0.875rem; font-weight: 600; color: var(--char); }
-.credit-status { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; background: var(--brand); color: var(--deep); border-radius: 999px; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; }
-.credit-status::before { content: ''; width: 6px; height: 6px; background: var(--spring); border-radius: 50%; }
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--spring);
+    }
 
-.credit-amount-wrap { margin-bottom: 1.5rem; }
-.credit-amount-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.375rem; }
-.credit-amount { font-family: var(--font-mono); font-size: 2rem; font-weight: 500; color: var(--char); letter-spacing: -0.02em; line-height: 1; }
-.credit-amount-detail { margin-top: 0.5rem; font-size: 0.8125rem; color: var(--slate); }
+    .eyebrow.on-dark {
+      color: var(--brand);
+    }
 
-.credit-conditions {
-  background: var(--mist); border-radius: 14px; padding: 1.125rem; margin-bottom: 1.25rem;
-  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;
-}
-.credit-cond { text-align: left; }
-.credit-cond-label { font-size: 0.625rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--spring); margin-bottom: 4px; }
-.credit-cond-value { font-family: var(--font-mono); font-size: 1rem; font-weight: 600; color: var(--deep); letter-spacing: -0.01em; }
+    .body-lg {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
 
-.credit-collateral {
-  display: flex; align-items: center; gap: 0.625rem; padding: 0.875rem 1rem;
-  background: var(--ink); color: var(--white); border-radius: 12px;
-}
-.credit-collateral svg { width: 18px; height: 18px; color: var(--brand); flex-shrink: 0; }
-.credit-collateral-text { font-size: 0.8125rem; line-height: 1.4; }
-.credit-collateral-text strong { color: var(--brand); font-weight: 600; }
+    .mono {
+      font-family: var(--font-mono);
+      font-feature-settings: 'tnum';
+    }
 
-@media (max-width: 999px) { .hero-visual { max-width: 24rem; margin: 2rem auto 0; } }
+    .wm {
+      display: inline-flex;
+      align-items: baseline;
+      position: relative;
+      letter-spacing: -0.04em;
+      vertical-align: baseline;
+    }
 
-/* COMPARISON */
-.comparison-header { text-align: center; max-width: 44rem; margin: 0 auto 4rem; }
-.comparison-header > * + * { margin-top: 1rem; }
-.comparison-header .description { color: var(--slate); font-size: 1.0625rem; }
+    .wm .go {
+      font-weight: 300;
+    }
 
-.comparison-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 56rem; margin: 0 auto;
-}
-@media (max-width: 700px) { .comparison-grid { grid-template-columns: 1fr; } }
+    .wm .bra {
+      font-weight: 700;
+    }
 
-.comp-card { padding: 2rem; border-radius: 20px; }
-.comp-card-bad {
-  background: var(--snow); border: 1px solid var(--cloud);
-}
-.comp-card-good {
-  background: var(--ink); color: var(--white); position: relative; overflow: hidden;
-}
-.comp-card-good::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--brand); }
-.comp-card-eyebrow {
-  font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.75rem;
-}
-.comp-card-bad .comp-card-eyebrow { color: var(--silver); }
-.comp-card-good .comp-card-eyebrow { color: var(--brand); }
-.comp-card-title {
-  font-size: 1.375rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 1.5rem;
-}
-.comp-list { list-style: none; display: grid; gap: 0.875rem; }
-.comp-list li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9375rem; line-height: 1.5; }
-.comp-list svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 0.0625rem; }
-.comp-card-bad .comp-list { color: var(--slate); }
-.comp-card-bad .comp-list svg { color: var(--silver); }
-.comp-card-good .comp-list { color: var(--white); }
-.comp-card-good .comp-list svg { color: var(--brand); }
+    .wm .o-wrap {
+      position: relative;
+      display: inline-block;
+    }
 
-/* BENEFITS */
-.benefits-header { text-align: center; max-width: 44rem; margin: 0 auto 4rem; }
-.benefits-header > * + * { margin-top: 1rem; }
-.benefits-header .description { color: var(--slate); font-size: 1.0625rem; }
+    .wm .circumflex {
+      position: absolute;
+      top: -0.05em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.35em;
+      height: 0.15em;
+      pointer-events: none;
+    }
 
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.benefit { background: var(--white); border: 1px solid var(--cloud); border-radius: 20px; padding: 2rem; transition: all 0.3s var(--ease-out); position: relative; overflow: hidden; }
-.benefit::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--brand); transform-origin: left; transform: scaleX(0); transition: transform 0.4s var(--ease-out); }
-.benefit:hover { border-color: var(--char); transform: translateY(-4px); }
-.benefit:hover::before { transform: scaleX(1); }
+    .wm-on-dark .circumflex path {
+      stroke: var(--brand);
+    }
 
-.benefit-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--mist); display: grid; place-items: center; color: var(--spring); margin-bottom: 1.5rem; }
-.benefit-icon svg { width: 22px; height: 22px; }
-.benefit-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.25; margin-bottom: 0.625rem; }
-.benefit-description { font-size: 0.9375rem; line-height: 1.55; color: var(--slate); }
-.benefit-callout {
-  display: inline-flex; align-items: center; gap: 0.375rem; margin-top: 1rem;
-  padding: 0.375rem 0.75rem; background: var(--mist); color: var(--deep); border-radius: 999px; font-size: 0.75rem; font-weight: 500;
-}
-.benefit-callout svg { width: 12px; height: 12px; }
+    .wm-on-light .circumflex path {
+      stroke: var(--spring);
+    }
 
-/* HOW (steps) */
-.steps-section { background: var(--snow); }
-.steps { display: grid; gap: 1rem; counter-reset: step; max-width: 56rem; margin: 3rem auto 0; }
-.step { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; padding: 1.75rem 2rem; background: var(--white); border: 1px solid var(--cloud); border-radius: 16px; transition: all 0.3s var(--ease-out); position: relative; }
-.step:hover { border-color: var(--spring); transform: translateX(4px); }
-.step-num { counter-increment: step; width: 44px; height: 44px; border-radius: 12px; background: var(--mist); color: var(--spring); display: grid; place-items: center; font-family: var(--font-mono); font-weight: 600; font-size: 1.125rem; flex-shrink: 0; }
-.step-num::before { content: counter(step, decimal-leading-zero); }
-.step-content > * + * { margin-top: 0.25rem; }
-.step-title { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.005em; }
-.step-description { font-size: 0.875rem; color: var(--slate); line-height: 1.5; }
-.step-tag { font-family: var(--font-mono); font-size: 0.6875rem; color: var(--asparagus); padding: 0.375rem 0.75rem; background: var(--mist); border-radius: 999px; white-space: nowrap; }
-@media (max-width: 700px) { .step { grid-template-columns: auto 1fr; padding: 1.25rem 1.25rem; } .step-tag { display: none; } }
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
 
-/* GROWTH (DARK) */
-.growth { background: var(--ink); color: var(--white); position: relative; overflow: hidden; }
-.growth::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: var(--brand); }
-.growth-inner { max-width: 56rem; margin: 0 auto; padding: 0 var(--gutter); }
-.growth-title { font-family: var(--font-display); font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; }
-.growth-title strong { font-weight: 700; color: var(--brand); }
-.growth-subtitle { margin-top: 1.5rem; color: rgba(255,255,255,0.7); font-size: 1.0625rem; max-width: 40rem; }
+    section {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
 
-.growth-list { margin-top: 2.5rem; display: grid; gap: 1rem; }
-.growth-item { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-.growth-item:last-child { border-bottom: none; }
-.growth-icon { width: 32px; height: 32px; border-radius: 10px; background: rgba(204,252,203,0.12); display: grid; place-items: center; color: var(--brand); flex-shrink: 0; margin-top: 0.125rem; }
-.growth-icon svg { width: 18px; height: 18px; }
-.growth-text { font-size: 1rem; color: var(--white); line-height: 1.5; }
-.growth-text strong { color: var(--brand); font-weight: 600; }
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s var(--ease-out);
+    }
 
-/* FAQ */
-.faq-header { text-align: center; max-width: 42rem; margin: 0 auto 3rem; }
-.faq-header > * + * { margin-top: 1rem; }
-.faq-list { max-width: 56rem; margin: 0 auto; display: grid; gap: 0.75rem; }
-.faq-item { background: var(--white); border: 1px solid var(--cloud); border-radius: 14px; overflow: hidden; transition: all 0.25s var(--ease-out); }
-.faq-item[open] { border-color: var(--spring); }
-.faq-item summary { list-style: none; cursor: pointer; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: 1rem; font-weight: 500; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: ''; flex-shrink: 0; width: 12px; height: 12px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 2v8M2 6h8' stroke='%23666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); transition: transform 0.25s var(--ease-out); }
-.faq-item[open] summary::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6h8' stroke='%23568259' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); }
-.faq-item .answer { padding: 0 1.5rem 1.5rem; font-size: 0.9375rem; color: var(--slate); line-height: 1.6; }
+    .nav.scrolled {
+      border-bottom-color: var(--cloud);
+      background: rgba(255, 255, 255, 0.85);
+    }
 
-/* CTA */
-.cta-final { padding: clamp(4rem, 7vw, 6rem) 0; }
-.cta-final-inner { background: var(--ink); color: var(--white); border-radius: 32px; padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem); position: relative; overflow: hidden; }
-.cta-final-inner::before { content: ''; position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; background: var(--spring); border-radius: 50%; opacity: 0.18; filter: blur(60px); }
-.cta-final-inner::after { content: ''; position: absolute; bottom: -80px; left: 20%; width: 240px; height: 240px; background: var(--brand); border-radius: 50%; opacity: 0.10; filter: blur(50px); }
-.cta-final-content { position: relative; z-index: 1; max-width: 36rem; }
-.cta-final-title { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 200; line-height: 1.1; letter-spacing: -0.025em; }
-.cta-final-title strong { font-weight: 700; color: var(--brand); }
-.cta-final-description { margin-top: 1.5rem; font-size: 1.0625rem; color: rgba(255,255,255,0.65); line-height: 1.55; }
-.cta-final-actions { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: 0.875rem; }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
 
-/* Footer */
-.footer { background: var(--white); border-top: 1px solid var(--cloud); padding: 4rem 0 2.5rem; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .footer-brand { grid-column: 1 / -1; } }
-.footer-brand-mark { font-size: 1.75rem; }
-.footer-brand-tagline { margin-top: 1rem; font-size: 0.875rem; color: var(--slate); max-width: 22rem; line-height: 1.55; }
-.footer-social { margin-top: 1.5rem; display: flex; gap: 0.625rem; }
-.footer-social a { width: 36px; height: 36px; border-radius: 10px; background: var(--snow); border: 1px solid var(--cloud); display: grid; place-items: center; color: var(--slate); transition: all 0.2s var(--ease-out); }
-.footer-social a:hover { background: var(--char); border-color: var(--char); color: var(--white); }
-.footer-social svg { width: 16px; height: 16px; }
-.footer-col h4 { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--char); margin-bottom: 1rem; }
-.footer-links { list-style: none; display: grid; gap: 0.625rem; }
-.footer-links a { font-size: 0.875rem; color: var(--slate); transition: color 0.2s var(--ease-out); }
-.footer-links a:hover { color: var(--char); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--cloud); font-size: 0.75rem; color: var(--silver); flex-wrap: wrap; gap: 1rem; }
-.footer-bottom-links { display: flex; gap: 1.5rem; }
-.footer-bottom-links a:hover { color: var(--char); }
+    .nav-wordmark {
+      font-size: 1.5rem;
+      color: var(--char);
+    }
 
-/* Modal */
-.modal-overlay { position: fixed; inset: 0; background: rgba(10,10,10,0.55); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; z-index: 200; padding: 1rem; }
-.modal-overlay.open { display: flex; animation: fade-in 0.25s var(--ease-out); }
-@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-.modal { background: var(--white); border-radius: 24px; max-width: 480px; width: 100%; padding: 2.5rem; position: relative; animation: pop-in 0.35s var(--ease-out); }
-@keyframes pop-in { from { opacity: 0; transform: scale(0.94) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
-.modal-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: var(--snow); display: grid; place-items: center; color: var(--slate); transition: all 0.2s var(--ease-out); }
-.modal-close:hover { background: var(--char); color: var(--white); }
-.modal-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--spring); margin-bottom: 0.75rem; }
-.modal h3 { font-family: var(--font-display); font-size: 1.625rem; font-weight: 200; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.625rem; }
-.modal h3 strong { font-weight: 700; }
-.modal p { color: var(--slate); font-size: 0.9375rem; line-height: 1.55; margin-bottom: 1.75rem; }
-.modal-form { display: flex; flex-direction: column; gap: 0.875rem; }
-.modal-input, .modal-select { width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--cloud); border-radius: 12px; font-family: var(--font-body); font-size: 0.9375rem; color: var(--char); background: var(--white); }
-.modal-input:focus, .modal-select:focus { outline: none; border-color: var(--spring); }
-.modal-input::placeholder { color: var(--silver); }
-.modal-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 12px; padding-right: 2.5rem; }
-.modal-btn { background: var(--char); color: var(--white); padding: 0.875rem; border-radius: 12px; font-weight: 500; font-size: 0.9375rem; transition: all 0.2s var(--ease-out); margin-top: 0.5rem; }
-.modal-btn:hover { background: var(--spring); }
-.modal-success { text-align: center; padding: 1rem 0; }
-.modal-success .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; margin: 0 auto 1rem; }
-.modal-success .icon svg { width: 28px; height: 28px; stroke: var(--deep); }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin-left: 0.875rem;
+      padding-left: 0.875rem;
+      border-left: 1px solid var(--cloud);
+      transition: color 0.2s var(--ease-out);
+    }
 
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
-</style>
+    .nav-back:hover {
+      color: var(--char);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: color 0.2s var(--ease-out);
+    }
+
+    .nav-link:hover {
+      color: var(--char);
+    }
+
+    .nav-link.cta {
+      background: var(--char);
+      color: var(--white);
+      padding: 0.625rem 1.25rem;
+      border-radius: 999px;
+      transition: all 0.2s var(--ease-out);
+    }
+
+    .nav-link.cta:hover {
+      background: var(--spring);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        gap: 0.75rem;
+      }
+
+      .nav-link:not(.cta) {
+        display: none;
+      }
+
+      .nav-back {
+        display: none;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 999px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: all 0.25s var(--ease-out);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--char);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--spring);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px -8px rgba(86, 130, 89, 0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--char);
+      border-color: var(--cloud);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--char);
+      background: var(--snow);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .btn-light:hover {
+      background: var(--brand);
+      color: var(--deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-arrow {
+      transition: transform 0.2s var(--ease-out);
+    }
+
+    .btn:hover .btn-arrow {
+      transform: translateX(3px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal.delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal.delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal.delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: clamp(7rem, 14vw, 10rem);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: var(--brand);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1000px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 5rem;
+      }
+    }
+
+    .hero-content>*+* {
+      margin-top: 1.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.875rem;
+      background: var(--mist);
+      border: 1px solid var(--brand);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--deep);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-badge svg {
+      width: 14px;
+      height: 14px;
+      color: var(--spring);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+      font-weight: 200;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      color: var(--char);
+    }
+
+    .hero-title strong {
+      font-weight: 700;
+    }
+
+    .hero-title .accent {
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title .accent::after {
+      content: '';
+      position: absolute;
+      bottom: 0.06em;
+      left: -0.05em;
+      right: -0.05em;
+      height: 0.35em;
+      background: var(--brand);
+      z-index: -1;
+      transform: skewX(-3deg);
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--slate);
+      max-width: 32rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      align-items: center;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--cloud);
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--slate);
+    }
+
+    .hero-trust-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--spring);
+      flex-shrink: 0;
+    }
+
+    /* Hero visual — Crédito card */
+    .hero-visual {
+      position: relative;
+      max-width: 28rem;
+      width: 100%;
+      margin-left: auto;
+    }
+
+    .credit-card {
+      background: var(--white);
+      border: 1px solid var(--cloud);
+      border-radius: 24px;
+      padding: 1.75rem;
+      box-shadow: 0 24px 56px -24px rgba(26, 26, 26, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    }
+
+    .credit-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--cloud);
+    }
+
+    .credit-title {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .credit-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--mist);
+      display: grid;
+      place-items: center;
+      color: var(--spring);
+    }
+
+    .credit-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .credit-label {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+
+    .credit-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--char);
+    }
+
+    .credit-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      background: var(--brand);
+      color: var(--deep);
+      border-radius: 999px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .credit-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--spring);
+      border-radius: 50%;
+    }
+
+    .credit-amount-wrap {
+      margin-bottom: 1.5rem;
+    }
+
+    .credit-amount-label {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 0.375rem;
+    }
+
+    .credit-amount {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--char);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .credit-amount-detail {
+      margin-top: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--slate);
+    }
+
+    .credit-conditions {
+      background: var(--mist);
+      border-radius: 14px;
+      padding: 1.125rem;
+      margin-bottom: 1.25rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .credit-cond {
+      text-align: left;
+    }
+
+    .credit-cond-label {
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--spring);
+      margin-bottom: 4px;
+    }
+
+    .credit-cond-value {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--deep);
+      letter-spacing: -0.01em;
+    }
+
+    .credit-collateral {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.875rem 1rem;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 12px;
+    }
+
+    .credit-collateral svg {
+      width: 18px;
+      height: 18px;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .credit-collateral-text {
+      font-size: 0.8125rem;
+      line-height: 1.4;
+    }
+
+    .credit-collateral-text strong {
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    @media (max-width: 999px) {
+      .hero-visual {
+        max-width: 24rem;
+        margin: 2rem auto 0;
+      }
+    }
+
+    /* COMPARISON */
+    .comparison-header {
+      text-align: center;
+      max-width: 44rem;
+      margin: 0 auto 4rem;
+    }
+
+    .comparison-header>*+* {
+      margin-top: 1rem;
+    }
+
+    .comparison-header .description {
+      color: var(--slate);
+      font-size: 1.0625rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comp-card {
+      padding: 2rem;
+      border-radius: 20px;
+    }
+
+    .comp-card-bad {
+      background: var(--snow);
+      border: 1px solid var(--cloud);
+    }
+
+    .comp-card-good {
+      background: var(--ink);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .comp-card-good::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--brand);
+    }
+
+    .comp-card-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .comp-card-bad .comp-card-eyebrow {
+      color: var(--silver);
+    }
+
+    .comp-card-good .comp-card-eyebrow {
+      color: var(--brand);
+    }
+
+    .comp-card-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .comp-list {
+      list-style: none;
+      display: grid;
+      gap: 0.875rem;
+    }
+
+    .comp-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .comp-list svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 0.0625rem;
+    }
+
+    .comp-card-bad .comp-list {
+      color: var(--slate);
+    }
+
+    .comp-card-bad .comp-list svg {
+      color: var(--silver);
+    }
+
+    .comp-card-good .comp-list {
+      color: var(--white);
+    }
+
+    .comp-card-good .comp-list svg {
+      color: var(--brand);
+    }
+
+    /* BENEFITS */
+    .benefits-header {
+      text-align: center;
+      max-width: 44rem;
+      margin: 0 auto 4rem;
+    }
+
+    .benefits-header>*+* {
+      margin-top: 1rem;
+    }
+
+    .benefits-header .description {
+      color: var(--slate);
+      font-size: 1.0625rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit {
+      background: var(--white);
+      border: 1px solid var(--cloud);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--brand);
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .benefit:hover {
+      border-color: var(--char);
+      transform: translateY(-4px);
+    }
+
+    .benefit:hover::before {
+      transform: scaleX(1);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--mist);
+      display: grid;
+      place-items: center;
+      color: var(--spring);
+      margin-bottom: 1.5rem;
+    }
+
+    .benefit-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .benefit-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+      margin-bottom: 0.625rem;
+    }
+
+    .benefit-description {
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      color: var(--slate);
+    }
+
+    .benefit-callout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      margin-top: 1rem;
+      padding: 0.375rem 0.75rem;
+      background: var(--mist);
+      color: var(--deep);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .benefit-callout svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* HOW (steps) */
+    .steps-section {
+      background: var(--snow);
+    }
+
+    .steps {
+      display: grid;
+      gap: 1rem;
+      counter-reset: step;
+      max-width: 56rem;
+      margin: 3rem auto 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.75rem 2rem;
+      background: var(--white);
+      border: 1px solid var(--cloud);
+      border-radius: 16px;
+      transition: all 0.3s var(--ease-out);
+      position: relative;
+    }
+
+    .step:hover {
+      border-color: var(--spring);
+      transform: translateX(4px);
+    }
+
+    .step-num {
+      counter-increment: step;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--mist);
+      color: var(--spring);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 1.125rem;
+      flex-shrink: 0;
+    }
+
+    .step-num::before {
+      content: counter(step, decimal-leading-zero);
+    }
+
+    .step-content>*+* {
+      margin-top: 0.25rem;
+    }
+
+    .step-title {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+    }
+
+    .step-description {
+      font-size: 0.875rem;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    .step-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--asparagus);
+      padding: 0.375rem 0.75rem;
+      background: var(--mist);
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 700px) {
+      .step {
+        grid-template-columns: auto 1fr;
+        padding: 1.25rem 1.25rem;
+      }
+
+      .step-tag {
+        display: none;
+      }
+    }
+
+    /* GROWTH (DARK) */
+    .growth {
+      background: var(--ink);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .growth::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: var(--brand);
+    }
+
+    .growth-inner {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .growth-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 200;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .growth-title strong {
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .growth-subtitle {
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.0625rem;
+      max-width: 40rem;
+    }
+
+    .growth-list {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .growth-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .growth-item:last-child {
+      border-bottom: none;
+    }
+
+    .growth-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(204, 252, 203, 0.12);
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+
+    .growth-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .growth-text {
+      font-size: 1rem;
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    .growth-text strong {
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-header {
+      text-align: center;
+      max-width: 42rem;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-header>*+* {
+      margin-top: 1rem;
+    }
+
+    .faq-list {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--cloud);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.25s var(--ease-out);
+    }
+
+    .faq-item[open] {
+      border-color: var(--spring);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '';
+      flex-shrink: 0;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 2v8M2 6h8' stroke='%23666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      transition: transform 0.25s var(--ease-out);
+    }
+
+    .faq-item[open] summary::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6h8' stroke='%23568259' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    .faq-item .answer {
+      padding: 0 1.5rem 1.5rem;
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* CTA */
+    .cta-final {
+      padding: clamp(4rem, 7vw, 6rem) 0;
+    }
+
+    .cta-final-inner {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 32px;
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final-inner::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 360px;
+      height: 360px;
+      background: var(--spring);
+      border-radius: 50%;
+      opacity: 0.18;
+      filter: blur(60px);
+    }
+
+    .cta-final-inner::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: 20%;
+      width: 240px;
+      height: 240px;
+      background: var(--brand);
+      border-radius: 50%;
+      opacity: 0.10;
+      filter: blur(50px);
+    }
+
+    .cta-final-content {
+      position: relative;
+      z-index: 1;
+      max-width: 36rem;
+    }
+
+    .cta-final-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 200;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .cta-final-title strong {
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .cta-final-description {
+      margin-top: 1.5rem;
+      font-size: 1.0625rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.55;
+    }
+
+    .cta-final-actions {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--cloud);
+      padding: 4rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .footer-brand-mark {
+      font-size: 1.75rem;
+    }
+
+    .footer-brand-tagline {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: var(--slate);
+      max-width: 22rem;
+      line-height: 1.55;
+    }
+
+    .footer-social {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.625rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--snow);
+      border: 1px solid var(--cloud);
+      display: grid;
+      place-items: center;
+      color: var(--slate);
+      transition: all 0.2s var(--ease-out);
+    }
+
+    .footer-social a:hover {
+      background: var(--char);
+      border-color: var(--char);
+      color: var(--white);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--char);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.625rem;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--slate);
+      transition: color 0.2s var(--ease-out);
+    }
+
+    .footer-links a:hover {
+      color: var(--char);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--cloud);
+      font-size: 0.75rem;
+      color: var(--silver);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--char);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.55);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 1rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      animation: fade-in 0.25s var(--ease-out);
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal {
+      background: var(--white);
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      animation: pop-in 0.35s var(--ease-out);
+    }
+
+    @keyframes pop-in {
+      from {
+        opacity: 0;
+        transform: scale(0.94) translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--snow);
+      display: grid;
+      place-items: center;
+      color: var(--slate);
+      transition: all 0.2s var(--ease-out);
+    }
+
+    .modal-close:hover {
+      background: var(--char);
+      color: var(--white);
+    }
+
+    .modal-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--spring);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal h3 {
+      font-family: var(--font-display);
+      font-size: 1.625rem;
+      font-weight: 200;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.625rem;
+    }
+
+    .modal h3 strong {
+      font-weight: 700;
+    }
+
+    .modal p {
+      color: var(--slate);
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      margin-bottom: 1.75rem;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .modal-input,
+    .modal-select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--cloud);
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--char);
+      background: var(--white);
+    }
+
+    .modal-input:focus,
+    .modal-select:focus {
+      outline: none;
+      border-color: var(--spring);
+    }
+
+    .modal-input::placeholder {
+      color: var(--silver);
+    }
+
+    .modal-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 12px;
+      padding-right: 2.5rem;
+    }
+
+    .modal-btn {
+      background: var(--char);
+      color: var(--white);
+      padding: 0.875rem;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: all 0.2s var(--ease-out);
+      margin-top: 0.5rem;
+    }
+
+    .modal-btn:hover {
+      background: var(--spring);
+    }
+
+    .modal-success {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .modal-success .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--brand);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 1rem;
+    }
+
+    .modal-success .icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--deep);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="container nav-inner">
-    <div style="display: flex; align-items: center;">
-      <a href="index.html" class="nav-wordmark wm wm-on-light" aria-label="Gôbra">
-        <span class="go">g</span><span class="o-wrap"><span class="go">o</span><svg class="circumflex" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M 8 42 L 50 8 L 92 42" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bra">bra</span>
-      </a>
-      <a href="index.html" class="nav-back">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M7 3L4 6l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Início
-      </a>
-    </div>
-
-    <div class="nav-menu">
-      <a href="clientes.html" class="nav-link">Para clientes</a>
-      <a href="parceiros.html" class="nav-link">Para parceiros</a>
-      <a href="#" data-cta data-audience="prestador" class="nav-link cta">Quero saber mais</a>
-    </div>
-  </div>
-</nav>
-
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    
-    <div class="hero-content reveal">
-      <div class="hero-badge">
-        <svg viewBox="0 0 16 16" fill="none"><path d="M2 13l3-7 9 0 1 7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
-        Para você que executa obras e serviços
-      </div>
-
-      <h1 class="hero-title">
-        Capital de giro <span class="accent">na hora</span> e clientes que pagam de verdade.
-      </h1>
-      
-      <p class="hero-description">
-        Acesse crédito a taxas justas com a obra como garantia. Receba o pagamento garantido na entrega. Construa um histórico que abre cada vez mais portas.
-      </p>
-      
-      <div class="hero-actions">
-        <a href="#" data-cta data-audience="prestador" class="btn btn-primary">
-          Quero saber mais
-          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <div style="display: flex; align-items: center;">
+        <a href="index.html" class="nav-wordmark wm wm-on-light" aria-label="Gôbra">
+          <span class="go">g</span><span class="o-wrap"><span class="go">o</span><svg class="circumflex"
+              viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <path d="M 8 42 L 50 8 L 92 42" fill="none" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span><span class="bra">bra</span>
         </a>
-        <a href="#como-funciona" class="btn btn-secondary">Como funciona</a>
+        <a href="index.html" class="nav-back">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M7 3L4 6l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          Início
+        </a>
       </div>
-      
-      <div class="hero-trust">
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Crédito até 70% mais barato
-        </div>
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Sem risco de calote
-        </div>
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Histórico que cresce
-        </div>
+
+      <div class="nav-menu">
+        <a href="clientes.html" class="nav-link">Para clientes</a>
+        <a href="parceiros.html" class="nav-link">Para parceiros</a>
+        <a href="#" data-cta data-audience="prestador" class="nav-link cta">Quero saber mais</a>
       </div>
     </div>
+  </nav>
 
-    <!-- Crédito card mockup -->
-    <div class="hero-visual reveal delay-2" aria-hidden="true">
-      <div class="credit-card">
-        
-        <div class="credit-header">
-          <div class="credit-title">
-            <div class="credit-icon">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div>
-              <div class="credit-label">Crédito de giro</div>
-              <div class="credit-name">Capital pra começar a obra</div>
-            </div>
-          </div>
-          <span class="credit-status">Aprovado</span>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M2 13l3-7 9 0 1 7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <circle cx="8" cy="4" r="2" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          Para você que executa obras e serviços
         </div>
 
-        <div class="credit-amount-wrap">
-          <div class="credit-amount-label">Disponível para saque</div>
-          <div class="credit-amount">R$ 8.000,00</div>
-          <div class="credit-amount-detail">Aprovado em 2 minutos com base no seu Score Gôbra</div>
-        </div>
+        <h1 class="hero-title">
+          Capital de giro <span class="accent">na hora</span> e clientes que pagam de verdade.
+        </h1>
 
-        <div class="credit-conditions">
-          <div class="credit-cond">
-            <div class="credit-cond-label">Taxa</div>
-            <div class="credit-cond-value">1,5%/mês</div>
-          </div>
-          <div class="credit-cond">
-            <div class="credit-cond-label">Prazo</div>
-            <div class="credit-cond-value">6 meses</div>
-          </div>
-          <div class="credit-cond">
-            <div class="credit-cond-label">Score</div>
-            <div class="credit-cond-value">872</div>
-          </div>
-        </div>
-
-        <div class="credit-collateral">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <div class="credit-collateral-text">
-            <strong>R$ 24.500</strong> em custódia como garantia da operação
-          </div>
-        </div>
-
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-
-<!-- COMPARISON -->
-<section>
-  <div class="container">
-    
-    <div class="comparison-header reveal">
-      <div class="eyebrow">Antes vs depois</div>
-      <h2 class="display-md">A diferença no seu <strong>dia a dia.</strong></h2>
-      <p class="description">O jeito antigo te limita. O novo te dá escala.</p>
-    </div>
-
-    <div class="comparison-grid">
-
-      <div class="comp-card comp-card-bad reveal">
-        <div class="comp-card-eyebrow">Sem a Gôbra</div>
-        <h3 class="comp-card-title">O ciclo que trava o seu crescimento.</h3>
-        <ul class="comp-list">
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Pede adiantamento ao cliente — e o cliente desconfia
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            No banco, sem histórico, recebe um "não"
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Quando consegue crédito, paga 6% a 8% ao mês
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Termina a obra e ainda corre risco de calote
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            Reputação espalhada em mil reviews que ninguém vê
-          </li>
-        </ul>
-      </div>
-
-      <div class="comp-card comp-card-good reveal delay-1">
-        <div class="comp-card-eyebrow">Com a Gôbra</div>
-        <h3 class="comp-card-title">O sistema trabalhando a seu favor.</h3>
-        <ul class="comp-list">
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            O dinheiro do cliente já está em custódia desde o início
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Crédito aprovado em minutos com a obra como garantia
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Taxas a partir de 1,5% ao mês — até 70% mais baratas
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Pagamento garantido a cada etapa entregue
-          </li>
-          <li>
-            <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Score público que cresce a cada obra concluída
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- BENEFITS -->
-<section class="steps-section">
-  <div class="container">
-    
-    <div class="benefits-header reveal">
-      <div class="eyebrow">O que você ganha</div>
-      <h2 class="display-md">Quatro vantagens que <strong>mudam seu negócio.</strong></h2>
-      <p class="description">A Gôbra não é só uma plataforma — é uma alavanca de crescimento.</p>
-    </div>
-
-    <div class="benefits-grid">
-
-      <div class="benefit reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3 class="benefit-title">Capital de giro instantâneo</h3>
-        <p class="benefit-description">Compre material, contrate ajudante, comece a obra no mesmo dia. Crédito aprovado com base no Score Gôbra, em minutos.</p>
-        <span class="benefit-callout">
-          <svg viewBox="0 0 12 12" fill="none"><path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          A partir de 1,5% ao mês
-        </span>
-      </div>
-
-      <div class="benefit reveal delay-1">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="benefit-title">Pagamento garantido</h3>
-        <p class="benefit-description">O dinheiro do cliente fica em custódia desde o início. Você entrega, é aprovado, recebe. Sem ligação cobrando, sem mensagem ignorada.</p>
-        <span class="benefit-callout">
-          <svg viewBox="0 0 12 12" fill="none"><path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Fim do calote
-        </span>
-      </div>
-
-      <div class="benefit reveal delay-2">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M21 21l-7.5-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3 class="benefit-title">Demanda qualificada</h3>
-        <p class="benefit-description">Clientes chegam até você buscando por Score, especialidade e localização. Sem briga de preço com prestador desconhecido.</p>
-        <span class="benefit-callout">
-          <svg viewBox="0 0 12 12" fill="none"><path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Mais contratos
-        </span>
-      </div>
-
-      <div class="benefit reveal delay-3">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="benefit-title">Histórico que cresce</h3>
-        <p class="benefit-description">Cada obra entregue eleva seu Score, melhora suas taxas de crédito e atrai clientes melhores. Você vira um ativo financeiro.</p>
-        <span class="benefit-callout">
-          <svg viewBox="0 0 12 12" fill="none"><path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Você vale mais a cada obra
-        </span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- HOW IT WORKS -->
-<section id="como-funciona">
-  <div class="container">
-    
-    <div class="benefits-header reveal">
-      <div class="eyebrow">Como funciona</div>
-      <h2 class="display-md">Da contratação <strong>ao recebimento.</strong></h2>
-      <p class="description">Cinco passos, todos pensados pra quem está na obra.</p>
-    </div>
-
-    <div class="steps">
-      
-      <div class="step reveal">
-        <div class="step-num"></div>
-        <div class="step-content">
-          <div class="step-title">Cliente te contrata pela Gôbra</div>
-          <div class="step-description">Você recebe a oferta com escopo, prazo e valor já estruturados em etapas. Aceita ou negocia direto pelo app.</div>
-        </div>
-        <span class="step-tag">Você decide</span>
-      </div>
-
-      <div class="step reveal delay-1">
-        <div class="step-num"></div>
-        <div class="step-content">
-          <div class="step-title">O dinheiro entra em custódia — e você vê</div>
-          <div class="step-description">Antes de você sair de casa pra começar, o saldo total da obra está confirmado em conta segregada. Risco zero.</div>
-        </div>
-        <span class="step-tag">Garantia</span>
-      </div>
-
-      <div class="step reveal delay-2">
-        <div class="step-num"></div>
-        <div class="step-content">
-          <div class="step-title">Você saca crédito de giro pra começar</div>
-          <div class="step-description">Precisa de dinheiro pra material? Aciona o crédito direto pelo app. Aprovação em minutos, com a obra como garantia.</div>
-        </div>
-        <span class="step-tag">Mesmo dia</span>
-      </div>
-
-      <div class="step reveal delay-3">
-        <div class="step-num"></div>
-        <div class="step-content">
-          <div class="step-title">Cada etapa concluída libera seu pagamento</div>
-          <div class="step-description">Termina a etapa, sobe a foto, cliente aprova. O valor cai na sua conta automaticamente. Sem cobrar, sem esperar.</div>
-        </div>
-        <span class="step-tag">Por etapa</span>
-      </div>
-
-      <div class="step reveal">
-        <div class="step-num"></div>
-        <div class="step-content">
-          <div class="step-title">Obra entregue, score sobe, próxima vem mais fácil</div>
-          <div class="step-description">A entrega vira histórico. O histórico vira melhores taxas de crédito e mais clientes querendo trabalhar com você.</div>
-        </div>
-        <span class="step-tag">Crescimento</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- GROWTH (DARK) -->
-<section class="growth">
-  <div class="growth-inner reveal">
-    <div class="eyebrow on-dark" style="margin-bottom: 1.5rem;">A escalada</div>
-    <h2 class="growth-title">De obra em obra, <strong>você cresce.</strong></h2>
-    <p class="growth-subtitle">Quem entrega bem, é reconhecido. Quem é reconhecido, recebe melhores condições. Quem tem melhores condições, fecha mais contratos. É uma escalada que você controla.</p>
-    
-    <div class="growth-list">
-      
-      <div class="growth-item">
-        <div class="growth-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="growth-text">
-          <strong>Score que sobe</strong> — Cada obra concluída no prazo, dentro do orçamento e com cliente satisfeito eleva seu score público.
-        </div>
-      </div>
-
-      <div class="growth-item">
-        <div class="growth-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="growth-text">
-          <strong>Taxas que caem</strong> — Score alto significa risco baixo. Quanto mais você entrega, mais barato fica seu crédito de giro.
-        </div>
-      </div>
-
-      <div class="growth-item">
-        <div class="growth-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M2 18l3-8 14 0 3 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="6" r="3" stroke="currentColor" stroke-width="2"/></svg>
-        </div>
-        <div class="growth-text">
-          <strong>Demanda que cresce</strong> — Clientes te encontram primeiro. Você escolhe pra quem trabalhar — não o contrário.
-        </div>
-      </div>
-
-      <div class="growth-item">
-        <div class="growth-icon">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="growth-text">
-          <strong>Capacidade que escala</strong> — Com crédito barato e fluxo previsível, você pega mais obras simultâneas e contrata equipe.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- FAQ -->
-<section>
-  <div class="container">
-    
-    <div class="faq-header reveal">
-      <div class="eyebrow">Perguntas frequentes</div>
-      <h2 class="display-md">As <strong>dúvidas</strong> mais comuns.</h2>
-    </div>
-
-    <div class="faq-list">
-      
-      <details class="faq-item reveal">
-        <summary>Como faço pra me cadastrar na Gôbra?</summary>
-        <div class="answer">Você se cadastra direto pelo nosso site informando dados da sua empresa ou MEI, especialidade e área de atuação. Validamos seu cadastro inicial em até 48h e construímos o seu Score Gôbra a partir de bureaus de crédito, Google Meu Negócio, Reclame Aqui e seu histórico futuro na plataforma.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>Preciso ter CNPJ pra usar?</summary>
-        <div class="answer">Sim. Atendemos MEI, ME, EI e sociedades em geral. Não trabalhamos com pessoa física pelo lado da execução — isso garante mais proteção pra você (e pra plataforma) e permite a oferta de crédito de giro com taxas competitivas.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>Quanto custa o crédito de giro?</summary>
-        <div class="answer">Taxas variam conforme seu Score Gôbra e o porte da operação — partem de 1,5% ao mês para os melhores scores. É crédito de curta duração (até 6 meses) com a custódia da própria obra como garantia, o que permite preços muito mais competitivos que crédito tradicional.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>E se o cliente recusar de aprovar uma etapa entregue?</summary>
-        <div class="answer">A Gôbra age como árbitro neutro. Cliente precisa apresentar motivo objetivo (item do escopo não cumprido, qualidade abaixo do combinado, etc.). Você apresenta sua versão. Se for divergência genuína, mediamos. Se for má-fé, o saldo é liberado. Você nunca fica refém.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>Posso continuar trabalhando fora da Gôbra?</summary>
-        <div class="answer">Pode. Você não tem exclusividade conosco. Mas obras feitas pela Gôbra contam pro seu Score e te dão acesso a crédito — então você acaba querendo trazer cada vez mais contratos pra dentro da plataforma.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>A Gôbra cobra alguma taxa de quem executa?</summary>
-        <div class="answer">A taxa de custódia é cobrada do cliente. Você só paga juros se usar crédito de giro — e mesmo assim, fica muito mais barato do que qualquer alternativa de mercado.</div>
-      </details>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- CTA -->
-<section id="cta" class="cta-final">
-  <div class="container">
-    <div class="cta-final-inner">
-      
-      <div class="cta-final-content reveal">
-        <div class="eyebrow on-dark" style="margin-bottom: 1.5rem;">Vamos conversar</div>
-        <h2 class="cta-final-title">Construa <strong>do seu jeito.</strong></h2>
-        <p class="cta-final-description">
-          Conte da sua empresa pra gente. Te direcionamos para a conversa certa em até 24h.
+        <p class="hero-description">
+          Acesse crédito a taxas justas com a obra como garantia. Receba o pagamento garantido na entrega. Construa um
+          histórico que abre cada vez mais portas.
         </p>
-        
-        <div class="cta-final-actions">
-          <a href="#" data-cta data-audience="prestador" class="btn btn-light">
+
+        <div class="hero-actions">
+          <a href="#" data-cta data-audience="prestador" class="btn btn-primary">
             Quero saber mais
             <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </a>
+          <a href="#como-funciona" class="btn btn-secondary">Como funciona</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+            Crédito até 70% mais barato
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Sem risco de calote
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Histórico que cresce
+          </div>
+        </div>
+      </div>
+
+      <!-- Crédito card mockup -->
+      <div class="hero-visual reveal delay-2" aria-hidden="true">
+        <div class="credit-card">
+
+          <div class="credit-header">
+            <div class="credit-title">
+              <div class="credit-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div>
+                <div class="credit-label">Crédito de giro</div>
+                <div class="credit-name">Capital pra começar a obra</div>
+              </div>
+            </div>
+            <span class="credit-status">Aprovado</span>
+          </div>
+
+          <div class="credit-amount-wrap">
+            <div class="credit-amount-label">Disponível para saque</div>
+            <div class="credit-amount">R$ 8.000,00</div>
+            <div class="credit-amount-detail">Aprovado em 2 minutos com base no seu Score Gôbra</div>
+          </div>
+
+          <div class="credit-conditions">
+            <div class="credit-cond">
+              <div class="credit-cond-label">Taxa</div>
+              <div class="credit-cond-value">1,5%/mês</div>
+            </div>
+            <div class="credit-cond">
+              <div class="credit-cond-label">Prazo</div>
+              <div class="credit-cond-value">6 meses</div>
+            </div>
+            <div class="credit-cond">
+              <div class="credit-cond-label">Score</div>
+              <div class="credit-cond-value">872</div>
+            </div>
+          </div>
+
+          <div class="credit-collateral">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="credit-collateral-text">
+              <strong>R$ 24.500</strong> em custódia como garantia da operação
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
+  <!-- COMPARISON -->
+  <section>
+    <div class="container">
 
-      <div class="footer-brand">
-        <a href="index.html" class="footer-brand-mark wm wm-on-light" aria-label="Gôbra">
-          <span class="go">g</span><span class="o-wrap"><span class="go">o</span><svg class="circumflex" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M 8 42 L 50 8 L 92 42" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bra">bra</span>
-        </a>
-        <p class="footer-brand-tagline">A obra que você controla. Custódia, score e crédito para o setor de obras e serviços de construção no Brasil.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.5 19H4.5V8.5h3V19zM6 7.2C5 7.2 4.2 6.4 4.2 5.4S5 3.5 6 3.5s1.8.8 1.8 1.8S7 7.2 6 7.2zM20 19h-3v-5.4c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V19h-3V8.5h3v1.3c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4V19z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+      <div class="comparison-header reveal">
+        <div class="eyebrow">Antes vs depois</div>
+        <h2 class="display-md">A diferença no seu <strong>dia a dia.</strong></h2>
+        <p class="description">O jeito antigo te limita. O novo te dá escala.</p>
+      </div>
+
+      <div class="comparison-grid">
+
+        <div class="comp-card comp-card-bad reveal">
+          <div class="comp-card-eyebrow">Sem a Gôbra</div>
+          <h3 class="comp-card-title">O ciclo que trava o seu crescimento.</h3>
+          <ul class="comp-list">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              Pede adiantamento ao cliente — e o cliente desconfia
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              No banco, sem histórico, recebe um "não"
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              Quando consegue crédito, paga 6% a 8% ao mês
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              Termina a obra e ainda corre risco de calote
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 6l6 6M12 6l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              Reputação espalhada em mil reviews que ninguém vê
+            </li>
+          </ul>
+        </div>
+
+        <div class="comp-card comp-card-good reveal delay-1">
+          <div class="comp-card-eyebrow">Com a Gôbra</div>
+          <h3 class="comp-card-title">O sistema trabalhando a seu favor.</h3>
+          <ul class="comp-list">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              O dinheiro do cliente já está em custódia desde o início
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Crédito aprovado em minutos com a obra como garantia
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Taxas a partir de 1,5% ao mês — até 70% mais baratas
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Pagamento garantido a cada etapa entregue
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Score público que cresce a cada obra concluída
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BENEFITS -->
+  <section class="steps-section">
+    <div class="container">
+
+      <div class="benefits-header reveal">
+        <div class="eyebrow">O que você ganha</div>
+        <h2 class="display-md">Quatro vantagens que <strong>mudam seu negócio.</strong></h2>
+        <p class="description">A Gôbra não é só uma plataforma — é uma alavanca de crescimento.</p>
+      </div>
+
+      <div class="benefits-grid">
+
+        <div class="benefit reveal">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="benefit-title">Capital de giro instantâneo</h3>
+          <p class="benefit-description">Compre material, contrate ajudante, comece a obra no mesmo dia. Crédito
+            aprovado com base no Score Gôbra, em minutos.</p>
+          <span class="benefit-callout">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            A partir de 1,5% ao mês
+          </span>
+        </div>
+
+        <div class="benefit reveal delay-1">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="benefit-title">Pagamento garantido</h3>
+          <p class="benefit-description">O dinheiro do cliente fica em custódia desde o início. Você entrega, é
+            aprovado, recebe. Sem ligação cobrando, sem mensagem ignorada.</p>
+          <span class="benefit-callout">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Fim do calote
+          </span>
+        </div>
+
+        <div class="benefit reveal delay-2">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2" />
+              <path d="M21 21l-7.5-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="benefit-title">Demanda qualificada</h3>
+          <p class="benefit-description">Clientes chegam até você buscando por Score, especialidade e localização. Sem
+            briga de preço com prestador desconhecido.</p>
+          <span class="benefit-callout">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Mais contratos
+          </span>
+        </div>
+
+        <div class="benefit reveal delay-3">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="benefit-title">Histórico que cresce</h3>
+          <p class="benefit-description">Cada obra entregue eleva seu Score, melhora suas taxas de crédito e atrai
+            clientes melhores. Você vira um ativo financeiro.</p>
+          <span class="benefit-callout">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path d="M3 6l3 3 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Você vale mais a cada obra
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona">
+    <div class="container">
+
+      <div class="benefits-header reveal">
+        <div class="eyebrow">Como funciona</div>
+        <h2 class="display-md">Da contratação <strong>ao recebimento.</strong></h2>
+        <p class="description">Cinco passos, todos pensados pra quem está na obra.</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <div class="step-title">Cliente te contrata pela Gôbra</div>
+            <div class="step-description">Você recebe a oferta com escopo, prazo e valor já estruturados em etapas.
+              Aceita ou negocia direto pelo app.</div>
+          </div>
+          <span class="step-tag">Você decide</span>
+        </div>
+
+        <div class="step reveal delay-1">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <div class="step-title">O dinheiro entra em custódia — e você vê</div>
+            <div class="step-description">Antes de você sair de casa pra começar, o saldo total da obra está confirmado
+              em conta segregada. Risco zero.</div>
+          </div>
+          <span class="step-tag">Garantia</span>
+        </div>
+
+        <div class="step reveal delay-2">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <div class="step-title">Você saca crédito de giro pra começar</div>
+            <div class="step-description">Precisa de dinheiro pra material? Aciona o crédito direto pelo app. Aprovação
+              em minutos, com a obra como garantia.</div>
+          </div>
+          <span class="step-tag">Mesmo dia</span>
+        </div>
+
+        <div class="step reveal delay-3">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <div class="step-title">Cada etapa concluída libera seu pagamento</div>
+            <div class="step-description">Termina a etapa, sobe a foto, cliente aprova. O valor cai na sua conta
+              automaticamente. Sem cobrar, sem esperar.</div>
+          </div>
+          <span class="step-tag">Por etapa</span>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <div class="step-title">Obra entregue, score sobe, próxima vem mais fácil</div>
+            <div class="step-description">A entrega vira histórico. O histórico vira melhores taxas de crédito e mais
+              clientes querendo trabalhar com você.</div>
+          </div>
+          <span class="step-tag">Crescimento</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GROWTH (DARK) -->
+  <section class="growth">
+    <div class="growth-inner reveal">
+      <div class="eyebrow on-dark" style="margin-bottom: 1.5rem;">A escalada</div>
+      <h2 class="growth-title">De obra em obra, <strong>você cresce.</strong></h2>
+      <p class="growth-subtitle">Quem entrega bem, é reconhecido. Quem é reconhecido, recebe melhores condições. Quem
+        tem melhores condições, fecha mais contratos. É uma escalada que você controla.</p>
+
+      <div class="growth-list">
+
+        <div class="growth-item">
+          <div class="growth-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="growth-text">
+            <strong>Score que sobe</strong> — Cada obra concluída no prazo, dentro do orçamento e com cliente satisfeito
+            eleva seu score público.
+          </div>
+        </div>
+
+        <div class="growth-item">
+          <div class="growth-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="growth-text">
+            <strong>Taxas que caem</strong> — Score alto significa risco baixo. Quanto mais você entrega, mais barato
+            fica seu crédito de giro.
+          </div>
+        </div>
+
+        <div class="growth-item">
+          <div class="growth-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M2 18l3-8 14 0 3 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <circle cx="12" cy="6" r="3" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="growth-text">
+            <strong>Demanda que cresce</strong> — Clientes te encontram primeiro. Você escolhe pra quem trabalhar — não
+            o contrário.
+          </div>
+        </div>
+
+        <div class="growth-item">
+          <div class="growth-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+              <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="growth-text">
+            <strong>Capacidade que escala</strong> — Com crédito barato e fluxo previsível, você pega mais obras
+            simultâneas e contrata equipe.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+
+      <div class="faq-header reveal">
+        <div class="eyebrow">Perguntas frequentes</div>
+        <h2 class="display-md">As <strong>dúvidas</strong> mais comuns.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item reveal">
+          <summary>Como faço pra me cadastrar na Gôbra?</summary>
+          <div class="answer">Você se cadastra direto pelo nosso site informando dados da sua empresa ou MEI,
+            especialidade e área de atuação. Validamos seu cadastro inicial em até 48h e construímos o seu Score Gôbra a
+            partir de bureaus de crédito, Google Meu Negócio, Reclame Aqui e seu histórico futuro na plataforma.</div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>Preciso ter CNPJ pra usar?</summary>
+          <div class="answer">Sim. Atendemos MEI, ME, EI e sociedades em geral. Não trabalhamos com pessoa física pelo
+            lado da execução — isso garante mais proteção pra você (e pra plataforma) e permite a oferta de crédito de
+            giro com taxas competitivas.</div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>Quanto custa o crédito de giro?</summary>
+          <div class="answer">Taxas variam conforme seu Score Gôbra e o porte da operação — partem de 1,5% ao mês para
+            os melhores scores. É crédito de curta duração (até 6 meses) com a custódia da própria obra como garantia, o
+            que permite preços muito mais competitivos que crédito tradicional.</div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>E se o cliente recusar de aprovar uma etapa entregue?</summary>
+          <div class="answer">A Gôbra age como árbitro neutro. Cliente precisa apresentar motivo objetivo (item do
+            escopo não cumprido, qualidade abaixo do combinado, etc.). Você apresenta sua versão. Se for divergência
+            genuína, mediamos. Se for má-fé, o saldo é liberado. Você nunca fica refém.</div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>Posso continuar trabalhando fora da Gôbra?</summary>
+          <div class="answer">Pode. Você não tem exclusividade conosco. Mas obras feitas pela Gôbra contam pro seu Score
+            e te dão acesso a crédito — então você acaba querendo trazer cada vez mais contratos pra dentro da
+            plataforma.</div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>A Gôbra cobra alguma taxa de quem executa?</summary>
+          <div class="answer">A taxa de custódia é cobrada do cliente. Você só paga juros se usar crédito de giro — e
+            mesmo assim, fica muito mais barato do que qualquer alternativa de mercado.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section id="cta" class="cta-final">
+    <div class="container">
+      <div class="cta-final-inner">
+
+        <div class="cta-final-content reveal">
+          <div class="eyebrow on-dark" style="margin-bottom: 1.5rem;">Vamos conversar</div>
+          <h2 class="cta-final-title">Construa <strong>do seu jeito.</strong></h2>
+          <p class="cta-final-description">
+            Conte da sua empresa pra gente. Te direcionamos para a conversa certa em até 24h.
+          </p>
+
+          <div class="cta-final-actions">
+            <a href="#" data-cta data-audience="prestador" class="btn btn-light">
+              Quero saber mais
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-mark wm wm-on-light" aria-label="Gôbra">
+            <span class="go">g</span><span class="o-wrap"><span class="go">o</span><svg class="circumflex"
+                viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <path d="M 8 42 L 50 8 L 92 42" fill="none" stroke-width="6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span><span class="bra">bra</span>
+          </a>
+          <p class="footer-brand-tagline">A obra que você controla. Custódia, score e crédito para o setor de obras e
+            serviços de construção no Brasil.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.5 19H4.5V8.5h3V19zM6 7.2C5 7.2 4.2 6.4 4.2 5.4S5 3.5 6 3.5s1.8.8 1.8 1.8S7 7.2 6 7.2zM20 19h-3v-5.4c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V19h-3V8.5h3v1.3c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4V19z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg></a>
+            <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Para você</h4>
+          <ul class="footer-links">
+            <li><a href="clientes.html">Para clientes</a></li>
+            <li><a href="prestadores.html">Para prestadores</a></li>
+            <li><a href="parceiros.html">Para parceiros</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#" data-cta>Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">LGPD</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Gôbra Tecnologia LTDA.</div>
+        <div class="footer-bottom-links">
+          <a href="mailto:contato@gobra.ai">contato@gobra.ai</a>
+          <a href="#">gobra.ai</a>
         </div>
       </div>
-
-      <div class="footer-col">
-        <h4>Para você</h4>
-        <ul class="footer-links">
-          <li><a href="clientes.html">Para clientes</a></li>
-          <li><a href="prestadores.html">Para prestadores</a></li>
-          <li><a href="parceiros.html">Para parceiros</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#" data-cta>Contato</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul class="footer-links">
-          <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Privacidade</a></li>
-          <li><a href="#">LGPD</a></li>
-        </ul>
-      </div>
-
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <div>© 2026 Gôbra Tecnologia LTDA.</div>
-      <div class="footer-bottom-links">
-        <a href="mailto:contato@gobra.ai">contato@gobra.ai</a>
-        <a href="#">gobra.ai</a>
-      </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="contact-modal">
+    <div class="modal" style="max-width: 900px; max-height: 90vh; overflow-y: auto; padding: 0;">
+      <button class="modal-close"
+        onclick="document.getElementById('contact-modal').classList.remove('open'); document.body.style.overflow = '';"
+        aria-label="Fechar" style="position: absolute; top: 1rem; right: 1rem; z-index: 10;">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <!-- TYPEFORM EMBED -->
+      <div data-tf-live="01KQV011VH1KA126M0MDKRVQZP" style="width: 100%; height: 100%;"></div>
+      <script src="//embed.typeform.com/next/embed.js"></script>
+      <!-- FIM TYPEFORM -->
+
     </div>
   </div>
-</footer>
 
 
-<!-- MODAL -->
-<div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true">
-  <div class="modal">
-    <button class="modal-close" aria-label="Fechar">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
-
-    <form class="modal-form" novalidate>
-      <div class="modal-eyebrow">Quero saber mais</div>
-      <h3>Conte um pouco <strong>sobre você.</strong></h3>
-      <p>Vamos te direcionar para a conversa certa em até 24h.</p>
-
-      <input class="modal-input" type="text" name="name" placeholder="Seu nome" required>
-      <input class="modal-input" type="email" name="email" placeholder="Seu email" required>
-      <input class="modal-input" type="tel" name="phone" placeholder="Telefone (opcional)">
-      
-      <select class="modal-select" name="audience" required>
-        <option value="">Eu sou…</option>
-        <option value="cliente">Cliente — quero contratar uma obra</option>
-        <option value="prestador" selected>Prestador — executo obras e serviços</option>
-        <option value="parceiro">Parceiro financeiro — instituição/banco</option>
-        <option value="outro">Outro</option>
-      </select>
-
-      <textarea class="modal-input" name="message" placeholder="Mensagem (opcional)" rows="3" style="resize: vertical; font-family: inherit;"></textarea>
-
-      <button type="submit" class="modal-btn">Enviar</button>
-    </form>
-
-    <div class="modal-success" style="display: none;">
-      <div class="icon">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <h3>Recebemos <strong>sua mensagem.</strong></h3>
-      <p>Vamos retornar em até 24h no email que você informou.</p>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const nav = document.getElementById('nav');
-  const onScroll = () => { if (window.scrollY > 12) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); };
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-})();
-(function() {
-  const items = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('visible')); return; }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
-  items.forEach(el => io.observe(el));
-})();
-(function() {
-  const overlay = document.getElementById('contact-modal');
-  if (!overlay) return;
-  const formEl = overlay.querySelector('.modal-form');
-  const successEl = overlay.querySelector('.modal-success');
-  function openModal(audience) {
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    if (formEl) formEl.style.display = 'flex';
-    if (successEl) successEl.style.display = 'none';
-    const select = overlay.querySelector('select[name="audience"]');
-    if (select && audience) select.value = audience;
-    const firstInput = overlay.querySelector('input[name="name"]');
-    setTimeout(() => firstInput && firstInput.focus(), 100);
-  }
-  function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
-  document.querySelectorAll('[data-cta]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(el.getAttribute('data-audience') || 'prestador');
-    });
-  });
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-  overlay.querySelector('.modal-close')?.addEventListener('click', closeModal);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
-  formEl?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (formEl) formEl.style.display = 'none';
-    if (successEl) successEl.style.display = 'block';
-  });
-})();
-</script>
+  <script>
+    (function () {
+      const nav = document.getElementById('nav');
+      const onScroll = () => { if (window.scrollY > 12) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); };
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    })();
+    (function () {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('visible')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+      items.forEach(el => io.observe(el));
+    })();
+    (function () {
+      const overlay = document.getElementById('contact-modal');
+      if (!overlay) return;
+      const formEl = overlay.querySelector('.modal-form');
+      const successEl = overlay.querySelector('.modal-success');
+      function openModal(audience) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (formEl) formEl.style.display = 'flex';
+        if (successEl) successEl.style.display = 'none';
+        const select = overlay.querySelector('select[name="audience"]');
+        if (select && audience) select.value = audience;
+        const firstInput = overlay.querySelector('input[name="name"]');
+        setTimeout(() => firstInput && firstInput.focus(), 100);
+      }
+      function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+      document.querySelectorAll('[data-cta]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal(el.getAttribute('data-audience') || 'prestador');
+        });
+      });
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+      overlay.querySelector('.modal-close')?.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+      formEl?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (formEl) formEl.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
+      });
+    })();
+  </script>
 
 </body>
+
 </html>
